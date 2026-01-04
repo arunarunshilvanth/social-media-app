@@ -60,19 +60,42 @@ export default PostListProvider;
 const DEFAULT_POST_LIST = [
   {
     id: "1",
-    title: "Going to Mumbai",
-    body: `Hi Friends I am going to Mumbai for my
-vacation hope to enjoy a lot`,
-    reactions: 0,
+    title: "Built My First Full-Stack Feature 🚀",
+    body: `Today I implemented Add-to-Cart logic using React Context.
+Handled state updates, UI sync, and edge cases without backend support.
+Feeling confident about state management now.`,
+    reactions: 42,
     userId: "user-9",
-    tags: ["vacation", "Mumbai", "Enjoy"],
+    tags: ["React", "ContextAPI", "Learning", "Frontend"],
   },
   {
     id: "2",
-    title: "Pass ho gaya",
-    body: "4 years of hard work",
-    reactions: 10,
+    title: "Debugging Victory 🐛➡️✅",
+    body: `Spent 3 hours fixing a silent UI bug.
+Root cause: wrong dependency array in useEffect.
+Lesson learned: small mistakes can break big features.`,
+    reactions: 58,
     userId: "user-12",
-    tags: ["Graduated", "feeling happy"],
+    tags: ["Debugging", "useEffect", "ProblemSolving"],
+  },
+  {
+    id: "3",
+    title: "Code, Coffee, and Clarity ☕💻",
+    body: `Started the day stuck on a bug,
+ended it with a clean solution.
+Coding teaches patience more than anything else.`,
+    reactions: 31,
+    userId: "user-9",
+    tags: ["CodingLife", "Consistency", "Growth"],
+  },
+  {
+    id: "4",
+    title: "From Confusion to Confidence",
+    body: `React felt overwhelming at first.
+Now components, props, and state actually make sense.
+Progress is slow—but real.`,
+    reactions: 47,
+    userId: "user-12",
+    tags: ["ReactJS", "LearningCurve", "SelfImprovement"],
   },
 ];

@@ -1,20 +1,24 @@
+import { FaHome, FaPlusCircle } from "react-icons/fa";
+
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
-      style={{ width: "180px" }}
+      style={{ width: "180px", minHeight: "100vh" }}
     >
+      {/* TITLE */}
       <a
-        href="/"
+        href="#"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
       >
-        <svg className="bi pe-none me-2" width="40" height="32">
-          <use xlinkHref="#bootstrap"></use>
-        </svg>
         <span className="fs-4">Sidebar</span>
       </a>
+
       <hr />
+
+      {/* NAV ITEMS */}
       <ul className="nav nav-pills flex-column mb-auto">
+        {/* HOME */}
         <li
           className="nav-item"
           onClick={() => {
@@ -24,17 +28,17 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
           <a
             href="#"
             className={`nav-link text-white ${
-              selectedTab === "Home" && "active"
+              selectedTab === "Home" ? "active" : ""
             }`}
-            aria-current="page"
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#home"></use>
-            </svg>
+            <FaHome className="me-2" />
             Home
           </a>
         </li>
+
+        {/* CREATE POST */}
         <li
+          className="nav-item"
           onClick={() => {
             setSelectedTab("Create Post");
           }}
@@ -42,17 +46,18 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
           <a
             href="#"
             className={`nav-link text-white ${
-              selectedTab === "Create Post" && "active"
+              selectedTab === "Create Post" ? "active" : ""
             }`}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#speedometer2"></use>
-            </svg>
+            <FaPlusCircle className="me-2" />
             Create Post
           </a>
         </li>
       </ul>
+
       <hr />
+
+      {/* PROFILE DROPDOWN */}
       <div className="dropdown">
         <a
           href="#"
@@ -62,13 +67,14 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
         >
           <img
             src="https://github.com/mdo.png"
-            alt=""
+            alt="profile"
             width="32"
             height="32"
             className="rounded-circle me-2"
           />
           <strong>mdo</strong>
         </a>
+
         <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
           <li>
             <a className="dropdown-item" href="#">
